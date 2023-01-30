@@ -4,24 +4,13 @@
 * Autoprefixer: v10.4.7
 * Browsers: last 4 version
 */
-
-@mixin reset-list {
+.box, .box-2 {
   margin: 0;
   padding: 0;
   width: 80%;
   text-align: center;
   border-radius: 20px;
   background-color: aquamarine;
-}
-
-@mixin next {
-  background-color: brown;
-  border-radius: 5px;
-}
-
-.box {
-  @include reset-list;
-
   width: 400px;
   height: 400px;
 }
@@ -36,16 +25,14 @@
   width: 1000px;
   height: 600px;
   padding: 50px 30px;
-
-  @extend .box;
-
-  .mini-boxses {
-    width: 150px;
-    height: 150px;
-
-    @include next;
-  }
 }
+.box-2 .mini-boxses {
+  width: 150px;
+  height: 150px;
+  background-color: brown;
+  border-radius: 5px;
+}
+
 .example {
   display: -ms-grid;
   display: grid;
@@ -56,13 +43,9 @@
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
-  background: -webkit-gradient(
-    linear,
-    left top,
-    left bottom,
-    from(white),
-    to(black)
-  );
+  background: -webkit-gradient(linear, left top, left bottom, from(white), to(black));
   background: -o-linear-gradient(top, white, black);
   background: linear-gradient(to bottom, white, black);
 }
+
+/*# sourceMappingURL=style.css.map */
